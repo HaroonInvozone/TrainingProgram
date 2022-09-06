@@ -1,6 +1,7 @@
-﻿// C# program to illustrate the use of Delegates
+﻿ c# program to illustrate the use of delegates
 using System;
-namespace GeeksForGeeks
+using System.Collections.Generic;
+namespace geeksforgeeks
 {
     //Delegates
 
@@ -66,7 +67,7 @@ namespace GeeksForGeeks
     }
 
 
-   // Lamda expression
+    // Lamda expression
 
     class Program
     {
@@ -129,3 +130,29 @@ namespace GeeksForGeeks
         }
     }
 }
+
+
+
+namespace testofgenerics
+{
+    class gen
+    {
+        public static void Showarray<T>(T[] a)
+        {
+            for (int i = 0; i < a.Length; i++)
+            {
+                Console.WriteLine(a[i]);
+            }
+        }
+
+        public static void Main()
+        {
+            int[] a = { 1, 2, 3 };
+            string[] names = { "Ali", "Junaid", "hamza" };
+            Showarray<int>(a);
+            Showarray<string>(names);
+        }
+    }
+}
+
+

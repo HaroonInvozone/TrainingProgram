@@ -1,6 +1,8 @@
 ﻿ c# program to illustrate the use of delegates
+using ExtentionMethods;
 using System;
 using System.Collections.Generic;
+
 namespace geeksforgeeks
 {
     //Delegates
@@ -133,6 +135,20 @@ namespace geeksforgeeks
 
 
 
+//extention method
+namespace ExtentionMethods
+{
+
+    public static class Extensions
+    {
+        public static int WordCount(this string s)
+        {
+            return s.Split(new char[] { ' ', '.', '?' },
+                StringSplitOptions.RemoveEmptyEntries).Length;
+        }
+    }
+}
+
 namespace testofgenerics
 {
     class gen
@@ -149,10 +165,67 @@ namespace testofgenerics
         {
             int[] a = { 1, 2, 3 };
             string[] names = { "Ali", "Junaid", "hamza" };
-            Showarray<int>(a);
-            Showarray<string>(names);
+            //Showarray<int>(a);
+            //Showarray<string>(names);
+            int z = Extensions.WordCount("This is c# from index");
+            Console.WriteLine(z);
         }
     }
 }
 
 
+namespace PracOfAbstractClass
+{
+
+    public sealed class SealedClass
+    {
+        public void SFunc()
+        {
+            Console.WriteLine("hay i am sealed");
+        }
+    }
+    public abstract class AbstractClass
+    {
+        public abstract void gfg();
+    }
+
+    public class class1 : AbstractClass
+    {
+        public override void gfg()
+        {
+            Console.WriteLine("Hy i am class1");
+        }
+    }
+
+    public class class2 : AbstractClass
+    {
+        public override void gfg()
+        {
+            Console.WriteLine("hy i am class2");
+        }
+        public virtual void VirtualFunc()
+        {
+            Console.WriteLine("Virtual function base class");
+        }
+    }
+
+    class xyz : class2
+    {
+        public override void VirtualFunc()
+        {
+            Console.WriteLine("Virtual function derived class");
+        }
+        public static void Main()
+        {
+            class1 class1 = new class1();
+            class2 class2 = new class2();
+            xyz xyz = new xyz();
+            xyz.VirtualFunc();
+            class1.gfg();
+            class2.gfg();
+            class2.VirtualFunc();
+            SealedClass sealedClass = new SealedClass();
+            sealedClass.SFunc();
+        }
+    }
+}

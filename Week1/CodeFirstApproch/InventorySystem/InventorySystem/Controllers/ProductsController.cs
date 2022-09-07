@@ -6,12 +6,16 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using InventorySystem.Models;
+using Microsoft.Data.SqlClient;
+using System.Data;
+using Dapper;
 
 namespace InventorySystem.Controllers
 {
     public class ProductsController : Controller
     {
         private readonly InventoryDb _context;
+        private object sqlParms;
 
         public ProductsController(InventoryDb context)
         {
@@ -69,12 +73,23 @@ namespace InventorySystem.Controllers
         // GET: Products/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
+            Products products = new Products();
             if (id == null || _context.Products == null)
             {
                 return NotFound();
             }
+            using (var conn = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString))
+            {
+                var result = conn.Query(sql: "[dbo.sp_GetProductRecord]", param: new
+                {
+                    Id = id
+                },
+                commandType: CommandType.StoredProcedure);
+                products = (Products)result;
+            }
 
-            var products = await _context.Products.FindAsync(id);
+            //var result =  _context.Database.ExecuteSqlRaw($"sp_GetProductRecord {id}");
+            //var products = await _context.Products.FindAsync(id);
             if (products == null)
             {
                 return NotFound();

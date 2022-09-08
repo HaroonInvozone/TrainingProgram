@@ -259,3 +259,4 @@ C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySyst
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySystem\InventorySystem\obj\Debug\net6.0\InventorySystem.pdb
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySystem\InventorySystem\obj\Debug\net6.0\InventorySystem.genruntimeconfig.cache
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySystem\InventorySystem\obj\Debug\net6.0\ref\InventorySystem.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySystem\InventorySystem\bin\Debug\net6.0\Dapper.dll

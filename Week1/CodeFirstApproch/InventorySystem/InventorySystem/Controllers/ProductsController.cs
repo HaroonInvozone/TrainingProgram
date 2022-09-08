@@ -28,6 +28,15 @@ namespace InventorySystem.Controllers
               return _context.Products != null ? 
                           View(await _context.Products.ToListAsync()) :
                           Problem("Entity set 'InventoryDb.Products'  is null.");
+
+            //var result = from p in _context.Products
+            //             join b in _context.Bags on
+            //             p.Id equals b.Id
+            //             select new
+            //             {
+            //                 ProductType = p.Name,
+            //                 ProductName = b.Name,
+            //             };
         }
 
         // GET: Products/Details/5
@@ -40,6 +49,18 @@ namespace InventorySystem.Controllers
 
             var products = await _context.Products
                 .FirstOrDefaultAsync(m => m.Id == id);
+
+            //Practise of linq
+            //var products = from p in _context.Products
+            //               select new
+            //               {
+            //                   Productname = p.Name,
+            //               };
+            //var products = _context.Products.Select(p => new
+            //    {
+            //        Productname = p.Name,
+            //    }
+            //);
             if (products == null)
             {
                 return NotFound();

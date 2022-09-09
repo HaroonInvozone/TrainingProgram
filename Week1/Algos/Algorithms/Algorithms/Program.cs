@@ -4,29 +4,6 @@ namespace Algorithms
 {
     class Algo
     {
-
-        //public static Tuple<List<string>, List<int>> frequencyofcharacters(string str)
-        //{
-        //    char[] list1 = new char[str.Length];
-        //    List<int> list2 = new List<int>();
-        //    char[] ch = new char[str.Length];
-        //    for (int i = 0; i < str.Length; i++)
-        //    {
-        //        ch[i] = str[i];
-        //    }
-
-        //    for (int i = 0; i <= str.Length; i++)
-        //    {
-        //        char x = ch[i];
-        //        if (!list1.Contains(x))
-        //        {
-        //            list1[i] += x;
-        //        }
-        //    }
-
-
-        //    return Tuple.Create(list1, list2);
-        //}
         public string ReverseAString(string str)
         {
             char[] reversed = new char[str.Length];

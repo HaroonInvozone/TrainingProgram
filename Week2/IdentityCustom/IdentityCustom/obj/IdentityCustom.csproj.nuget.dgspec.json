@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj": {}
+    "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj": {
+    "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
+        "projectUniqueName": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
         "projectName": "IdentityCustom",
-        "projectPath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
+        "projectPath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
         "packagesPath": "C:\\Users\\Haroon ali\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\obj\\",
+        "outputPath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Haroon ali\\AppData\\Roaming\\NuGet\\NuGet.Config",

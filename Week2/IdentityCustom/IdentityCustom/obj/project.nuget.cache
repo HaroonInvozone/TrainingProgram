@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kpE4RyULIb+oiHoLwUS1mwHyN1fWuoN7TjHiaCs9QXjFxiX4fUj7tEdUVD3PAkcBQLO84ztxx+lgv5PzcvOsAQ==",
+  "dgSpecHash": "rD/Ic1SHliOPI0ffbApXhWzGaAulTLwATHCgnVUrKVgLuphQ4hgrx05WTTMNWVg1H6XQX3NoM2flrlitHeVsSQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week1\\WebApi\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
+  "projectFilePath": "C:\\Users\\Haroon ali\\Desktop\\TrainingProgram\\Week2\\IdentityCustom\\IdentityCustom\\IdentityCustom.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Haroon ali\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Haroon ali\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

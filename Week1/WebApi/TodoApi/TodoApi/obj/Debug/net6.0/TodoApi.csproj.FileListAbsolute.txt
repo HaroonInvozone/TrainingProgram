@@ -260,3 +260,8 @@ C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Deb
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\Scrutor.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.dll
+C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\WebApi\TodoApi\TodoApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Filters.Abstractions.dll

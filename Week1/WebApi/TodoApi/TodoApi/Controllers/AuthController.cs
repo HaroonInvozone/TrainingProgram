@@ -34,15 +34,54 @@ namespace TodoApi.Controllers
         [HttpPost("Login")]
         public async Task<ActionResult<string>> Login(UserDto userDto)
         {
-            //just check only the current user
             if (user.UserName != userDto.UserNamae)
                 return BadRequest("User name not found");
             if (!VerifyPasswordHash(userDto.Password, user.PasswordHash, user.PasswordSalt))
                 return BadRequest("The password was incorrect");
             var token = CreateToken(user);
+
+            var refreshToken = GenerateRefreshToken();
+            SetRefreshToken(refreshToken);
             return Ok(token);
         }
+        private RefreshToken GenerateRefreshToken() 
+        {
+            var refreshToken = new RefreshToken
+            {
+                Token = Convert.ToBase64String(RandomNumberGenerator.GetBytes(64)),
+                Expires = DateTime.Now.AddDays(2),
+                Created = DateTime.Now
+            };
 
+            return refreshToken;
+        }
+        private void SetRefreshToken(RefreshToken refreshToken)
+        {
+            var cookieOption = new CookieOptions
+            {
+                HttpOnly = true,    
+                Expires = refreshToken.Expires
+            };
+            Response.Cookies.Append("RefreshToken", refreshToken.Token, cookieOption);
+            user.RefreshToken = refreshToken.Token;
+            user.TokenCreated = refreshToken.Created;
+            user.TokenExpires = refreshToken.Expires;
+        }
+
+        [HttpPost("refreshtoken")]
+        public async Task<ActionResult<string>> RefreshToken()
+        {
+            var refreshToken = Request.Cookies["RefreshToken"];
+            if (!user.RefreshToken.Equals(refreshToken))
+                return Unauthorized("Invalid Refresh Token.");
+            if (user.TokenExpires < DateTime.Now)
+                return Unauthorized("Token expired.");
+            string token = CreateToken(user);
+            var newRefreshToken = GenerateRefreshToken();
+            SetRefreshToken(newRefreshToken);
+
+            return Ok(token);
+        }
         private string CreateToken(User user)
         {
             List<Claim> claims = new List<Claim>
@@ -58,7 +97,7 @@ namespace TodoApi.Controllers
 
                 var token = new JwtSecurityToken(
                     claims: claims,
-                    expires: DateTime.Now.AddDays(1),
+                    expires: DateTime.Now.AddSeconds(20),
                     signingCredentials: creds);
 
                 var jwt = new JwtSecurityTokenHandler().WriteToken(token);

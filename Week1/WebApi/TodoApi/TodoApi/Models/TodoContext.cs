@@ -11,5 +11,7 @@ namespace TodoApi.Models
         }
 
         public DbSet<TodoItem> TodoItems { get; set; } = null!;
+        public DbSet<User> User { get; set; } = null!;
+        public DbSet<RefreshToken> refreshToken { get; set; } = null!;
     }
 }

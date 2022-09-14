@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -11,6 +12,7 @@ namespace TodoApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize(Roles = "Admin")]
     public class TodoItemsController : ControllerBase
     {
         private readonly TodoContext _context;
@@ -21,7 +23,7 @@ namespace TodoApi.Controllers
         }
 
         // GET: api/TodoItems
-        [HttpGet]
+        [HttpGet (Name = "Get Items list")]
         public async Task<ActionResult<IEnumerable<TodoItem>>> GetTodoItems()
         {
           if (_context.TodoItems == null)

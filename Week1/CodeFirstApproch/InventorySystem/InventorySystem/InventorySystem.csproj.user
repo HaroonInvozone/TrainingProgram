@@ -12,5 +12,7 @@
     <WebStackScaffolding_DbContextTypeFullName>InventorySystem.Models.InventoryDb</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <ActiveDebugProfile>Docker</ActiveDebugProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Haroon ali\Desktop\TrainingProgram\Week1\CodeFirstApproch\InventorySystem\InventorySystem\Properties\PublishProfiles\registry.hub.docker.com_haroonali70.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
